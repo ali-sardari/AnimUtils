@@ -1,1 +1,1 @@
-include ':app',':anim_utils'
+include ':sample',':anim_utils'
