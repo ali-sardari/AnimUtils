@@ -23,16 +23,14 @@ dependencies {
 Then in your Java Code, you use it like below.
 
 ```java
-{
-    AnimUtils.with(Techniques.Shake)
-            .delay(100)
-            .duration(500).onEnd(new AnimUtils.AnimatorCallback() {
-        @Override
-        public void call(Animator animator) {
-            Toast.makeText(MainActivity.this, "Finished!", Toast.LENGTH_LONG).show();
-        }
-    }).playOn(txt_Text);
-}
+AnimUtils.with(Techniques.Shake)
+        .delay(100)
+        .duration(500).onEnd(new AnimUtils.AnimatorCallback() {
+    @Override
+    public void call(Animator animator) {
+        Toast.makeText(MainActivity.this, "Finished!", Toast.LENGTH_LONG).show();
+    }
+}).playOn(txt_Text);
 ```
 
 ### Effects
