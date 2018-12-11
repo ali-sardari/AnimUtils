@@ -1,6 +1,4 @@
 # AnimUtils
-استفاده آسان از افکت ها و انیمیشن های متنوع در اپلیکیشن های اندروید - برگرفته شده از یک کتابخانه خارجی
-
 
 Step 1. Add the JitPack repository to your build file. Add it in your root build.gradle at the end of repositories:
 
@@ -23,16 +21,14 @@ dependencies {
 Then in your Java Code, you use it like below.
 
 ```java
-{
-    AnimUtils.with(Techniques.Shake)
-            .delay(100)
-            .duration(500).onEnd(new AnimUtils.AnimatorCallback() {
-        @Override
-        public void call(Animator animator) {
-            Toast.makeText(MainActivity.this, "Finished!", Toast.LENGTH_LONG).show();
-        }
-    }).playOn(txt_Text);
-}
+AnimUtils.with(Techniques.Shake)
+        .delay(100)
+        .duration(500).onEnd(new AnimUtils.AnimatorCallback() {
+    @Override
+    public void call(Animator animator) {
+        Toast.makeText(MainActivity.this, "Finished!", Toast.LENGTH_LONG).show();
+    }
+}).playOn(txt_Text);
 ```
 
 ### Effects
